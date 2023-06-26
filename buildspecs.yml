@@ -8,8 +8,8 @@ phases:
     commands: 
       - echo Build started on `date` 
       - dotnet publish -c release -o ./build_output BlazorApp.csproj
-  artifacts:
-    files: 
+artifacts:
+ files: 
       - build_output/**/*
       - scripts/**/*
       - appspec.yml
