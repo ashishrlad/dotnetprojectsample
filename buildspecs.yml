@@ -2,11 +2,16 @@ version: 0.2
 phases:
   pre_build:
     commands: 
+      - echo Restore started on `date`
       - dotnet build
       - dotnet run
   build:
     commands: 
-      - echo Build started on `date` 
+      - echo Building dotnet API...
+      - cd aspnet-core/src/SITR.Web.Host
+      - echo Executing dotnet restore...
+      - dotnet restore
+      - echo Executing dotnet publish...
       - dotnet publish -c release -o ./build_output BlazorApp.csproj
 artifacts:
  files: 
