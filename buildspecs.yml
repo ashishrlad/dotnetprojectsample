@@ -2,8 +2,8 @@ version: 0.2
 phases:
   pre_build:
     commands: 
-      -dotnet build
-      -dotnet run
+      - dotnet build
+      - dotnet run
   build:
     commands: 
       - echo Build started on `date` 
