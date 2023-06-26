@@ -2,8 +2,8 @@ version: 0.2
 phases:
   pre_build:
     commands: 
-      - echo Restore started on `date` 
-      - dotnet restore BlazorApp.csproj
+      -dotnet build
+      -dotnet run
   build:
     commands: 
       - echo Build started on `date` 
